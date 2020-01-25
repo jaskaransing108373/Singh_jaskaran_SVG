@@ -1,0 +1,25 @@
+body {
+  font-size: 14px; padding: 1em;
+}
+main span {
+  cursor: pointer;
+}
+.selected { color: green; padding-left: 0.5em; }
+
+.selected:not(.wrapper)::before {
+  content: ' \2713';
+}
+
+
+object { width: 12em; }
+
+.wrapper { display: inline-block; position: relative; }
+
+.wrapper.selected::after {
+  content: ' \2713';
+  font-size: 2.5em;
+  position: absolute;
+  top: -20px;
+  right: -40px
+}
+.wrapper > * { pointer-events: none; }
